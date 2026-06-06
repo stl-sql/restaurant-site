@@ -97,6 +97,8 @@ filterBtns.forEach(btn => {
 });
 
 // ===== SCROLL ANIMATIONS =====
+// Désactivé pour éviter les problèmes sur mobile
+/*
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -137,6 +139,7 @@ document.querySelectorAll('.gallery-item').forEach((item, index) => {
     item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
     observer.observe(item);
 });
+*/
 
 // ===== FORM SUBMISSION =====
 const reservationForm = document.getElementById('reservationForm');

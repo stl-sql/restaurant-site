@@ -441,6 +441,8 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== SECTION STYLES ===== */
 section {
     padding: 100px 0;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .section-label {
@@ -808,6 +810,8 @@ section {
     overflow: hidden;
     cursor: pointer;
     height: 300px;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .gallery-item.large {
