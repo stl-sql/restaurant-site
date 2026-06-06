@@ -1162,6 +1162,7 @@ section {
         width: auto !important;
         display: inline-block !important;
         padding: 12px 30px !important;
+        margin: 0 auto;
     }
     
     .hero-title {
