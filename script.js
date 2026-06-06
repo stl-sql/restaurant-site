@@ -34,28 +34,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// ===== ACTIVE NAVIGATION LINK =====
-const sections = document.querySelectorAll('section');
-
-window.addEventListener('scroll', () => {
-    let current = '';
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-    
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
-});
-
 // ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -75,16 +53,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const filterBtns = document.querySelectorAll('.filter-btn');
 const menuCards = document.querySelectorAll('.menu-card');
 
-// S'assurer que toutes les cartes sont visibles au chargement
-menuCards.forEach(card => {
-    card.style.display = 'block';
-    card.style.opacity = '1';
-    card.style.visibility = 'visible';
-});
-
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        // Remove active class from all buttons
         filterBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         
@@ -95,8 +65,6 @@ filterBtns.forEach(btn => {
             
             if (filterValue === 'all' || category === filterValue) {
                 card.style.display = 'block';
-                card.style.opacity = '1';
-                card.style.visibility = 'visible';
             } else {
                 card.style.display = 'none';
             }
@@ -104,55 +72,8 @@ filterBtns.forEach(btn => {
     });
 });
 
-// ===== SCROLL ANIMATIONS =====
-// Désactivé pour éviter les problèmes sur mobile
-/*
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe sections
-document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = '0';
-    section.style.transform = 'translateY(30px)';
-    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-    observer.observe(section);
-});
-
-// Observe feature cards
-document.querySelectorAll('.feature-card').forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    observer.observe(card);
-});
-
-// NE PAS masquer les cartes menu au chargement
-// Les cartes sont visibles par défaut
-
-// Observe gallery items
-document.querySelectorAll('.gallery-item').forEach((item, index) => {
-    item.style.opacity = '0';
-    item.style.transform = 'scale(0.9)';
-    item.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-    observer.observe(item);
-});
-*/
-
 // ===== FORM SUBMISSION =====
 const reservationForm = document.getElementById('reservationForm');
-
-// Set minimum date to today
 const dateInput = document.getElementById('date');
 const today = new Date().toISOString().split('T')[0];
 dateInput.setAttribute('min', today);
@@ -160,7 +81,6 @@ dateInput.setAttribute('min', today);
 reservationForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    // Get form data
     const formData = {
         nom: document.getElementById('nom').value,
         prenom: document.getElementById('prenom').value,
@@ -172,43 +92,16 @@ reservationForm.addEventListener('submit', (e) => {
         message: document.getElementById('message').value
     };
     
-    // Format date
     const dateObj = new Date(formData.date);
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const formattedDate = dateObj.toLocaleDateString('fr-FR', options);
     
-    // Show success message
-    alert(`✨ Réservation Confirmée !\n\nMerci ${formData.prenom} ${formData.nom} !\n\nVotre réservation pour ${formData.personnes} personne(s) a été enregistrée avec succès.\n\n📅 Date: ${formattedDate}\n⏰ Heure: ${formData.heure}\n\nNous vous enverrons une confirmation à ${formData.email}\n\nÀ très bientôt au Délice Français ! 🍽️`);
+    alert(`✨ Réservation Confirmée !\n\nMerci ${formData.prenom} ${formData.nom} !\n\nVotre réservation pour ${formData.personnes} personne(s) a été enregistrée.\n\n📅 ${formattedDate} à ${formData.heure}\n\nConfirmation envoyée à ${formData.email}`);
     
-    // Reset form
     reservationForm.reset();
-    
-    // In a real application, you would send this data to a server
-    console.log('Reservation Data:', formData);
 });
 
-// ===== PARALLAX EFFECT ON HERO =====
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-        heroContent.style.opacity = 1 - (scrolled / 700);
-    }
-});
-
-// ===== MENU CARD HOVER EFFECT =====
-menuCards.forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', function() {
-        this.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// ===== SCROLL TO TOP BUTTON (OPTIONAL) =====
+// ===== SCROLL TO TOP BUTTON =====
 const scrollTopBtn = document.createElement('button');
 scrollTopBtn.innerHTML = '↑';
 scrollTopBtn.className = 'scroll-top-btn';
@@ -219,8 +112,8 @@ scrollTopBtn.style.cssText = `
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: var(--primary);
-    color: var(--dark);
+    background: #D4AF37;
+    color: #0D0D0F;
     border: none;
     font-size: 24px;
     cursor: pointer;
@@ -250,20 +143,4 @@ scrollTopBtn.addEventListener('click', () => {
     });
 });
 
-// ===== FORM INPUT ANIMATIONS =====
-const formInputs = document.querySelectorAll('.form-group input, .form-group select, .form-group textarea');
-
-formInputs.forEach(input => {
-    input.addEventListener('focus', function() {
-        this.parentElement.style.transform = 'translateY(-2px)';
-    });
-    
-    input.addEventListener('blur', function() {
-        this.parentElement.style.transform = 'translateY(0)';
-    });
-});
-
-// ===== CONSOLE MESSAGE =====
-console.log('%c🍽️ Le Délice Français', 'font-size: 24px; color: #D4AF37; font-weight: bold;');
-console.log('%cSite créé pour portfolio - Développeur Web', 'font-size: 14px; color: #6B6B6B;');
-console.log('%cDécouvrez nos créations gastronomiques !', 'font-size: 12px; color: #1A1A1D;');
+console.log('🍽️ Le Délice Français - Site chargé avec succès');

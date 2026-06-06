@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Délice Français - Restaurant Gastronomique Étoilé</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-logo">Le Délice</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Le Délice Français" class="logo-icon-img">
+                    <span class="logo-text">Le Délice Français</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                    <li><a href="#apropos" class="nav-link">À Propos</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#galerie" class="nav-link">Galerie</a></li>
+                    <li><a href="#contact" class="nav-link btn-reserve">Réserver</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-subtitle">Depuis 1995</span>
+            <h1 class="hero-title">L'Art de la Gastronomie Française</h1>
+            <p class="hero-description">Une expérience culinaire d'exception</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Découvrir le Menu</a>
+                <a href="#contact" class="btn btn-secondary">Réserver une Table</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+            <p>Scroll</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3>3 Étoiles Michelin</h3>
+                    <p>Distinction d'excellence depuis 2010</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍🍳</div>
+                    <h3>Chef Renommé</h3>
+                    <p>Formation dans les meilleures maisons</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Produits Bio</h3>
+                    <p>Ingrédients locaux et de saison</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍷</div>
+                    <h3>Cave Premium</h3>
+                    <p>Plus de 400 références</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-images">
+                    <div class="about-image-main">
+                        <img src="images/notre-chef.png" alt="Notre Chef" class="about-img">
+                    </div>
+                    <div class="about-image-small">
+                        <img src="images/nos-creations.png" alt="Nos Créations" class="about-img-small">
+                    </div>
+                    <div class="experience-badge">
+                        <div class="badge-number">30+</div>
+                        <div class="badge-text">Années</div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <span class="section-label">Notre Histoire</span>
+                    <h2 class="section-title">Une Passion Transmise de Génération en Génération</h2>
+                    <p>Depuis 1995, Le Délice Français incarne l'excellence de la gastronomie française. Notre chef, formé auprès des plus grands maîtres, orchestre une cuisine d'exception où tradition et innovation se marient harmonieusement.</p>
+                    <p>Chaque plat raconte une histoire, chaque assiette est une œuvre d'art. Nous sélectionnons rigoureusement nos producteurs locaux pour vous garantir des saveurs authentiques et une qualité irréprochable.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">8,000+</span>
+                            <span class="stat-label">Clients Satisfaits</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">120</span>
+                            <span class="stat-label">Créations Uniques</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Prix Culinaires</span>
+                        </div>
+                    </div>
+                    <a href="#menu" class="btn btn-primary">Notre Menu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Nos Créations</span>
+                <h2 class="section-title">Menu Gastronomique</h2>
+                <p class="section-desc">Une sélection raffinée de nos plats signatures</p>
+            </div>
+            
+            <div class="menu-filter">
+                <button class="filter-btn active" data-filter="all">Tous les Plats</button>
+                <button class="filter-btn" data-filter="entrees">Entrées</button>
+                <button class="filter-btn" data-filter="plats">Plats</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+            </div>
+
+            <div class="menu-grid" id="menuGrid">
+                <!-- Entrées -->
+                <div class="menu-card" data-category="entrees">
+                    <div class="card-image">
+                        <img src="images/soupe-oignon.png" alt="Soupe à l'Oignon Gratinée" class="dish-image">
+                        <span class="card-badge signature">Signature</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Soupe à l'Oignon Gratinée</h3>
+                        <p>Oignons caramélisés, bouillon corsé, Comté AOP</p>
+                        <div class="card-footer">
+                            <span class="price">14€</span>
+                            <span class="tags">
+                                <span class="tag">Traditionnel</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="entrees">
+                    <div class="card-image">
+                        <img src="images/foie-gras.png" alt="Foie Gras Mi-Cuit Maison" class="dish-image">
+                        <span class="card-badge chef">Chef</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Foie Gras Mi-Cuit Maison</h3>
+                        <p>Chutney de figues, pain brioché, fleur de sel</p>
+                        <div class="card-footer">
+                            <span class="price">24€</span>
+                            <span class="tags">
+                                <span class="tag premium">Premium</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="entrees">
+                    <div class="card-image">
+                        <img src="images/chevre-chaud.png" alt="Salade de Chèvre Chaud" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Salade de Chèvre Chaud</h3>
+                        <p>Mesclun, tomates confites, noix caramélisées</p>
+                        <div class="card-footer">
+                            <span class="price">16€</span>
+                            <span class="tags">
+                                <span class="tag vege">Végétarien</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="entrees">
+                    <div class="card-image">
+                        <img src="images/escargots-bourgogne.png" alt="Escargots de Bourgogne" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Escargots de Bourgogne</h3>
+                        <p>Beurre persillé à l'ail, pain de campagne</p>
+                        <div class="card-footer">
+                            <span class="price">18€</span>
+                            <span class="tags">
+                                <span class="tag">Classique</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Plats -->
+                <div class="menu-card" data-category="plats">
+                    <div class="card-image">
+                        <img src="images/coq-au-vin.png" alt="Coq au Vin de Bourgogne" class="dish-image">
+                        <span class="card-badge signature">Signature</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Coq au Vin de Bourgogne</h3>
+                        <p>Poulet fermier, lardons, champignons, oignons</p>
+                        <div class="card-footer">
+                            <span class="price">32€</span>
+                            <span class="tags">
+                                <span class="tag">Traditionnel</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="plats">
+                    <div class="card-image">
+                        <img src="images/magret-canard.png" alt="Magret de Canard aux Cerises" class="dish-image">
+                        <span class="card-badge chef">Chef</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Magret de Canard aux Cerises</h3>
+                        <p>Sauce cerises Montmorency, gratin dauphinois</p>
+                        <div class="card-footer">
+                            <span class="price">36€</span>
+                            <span class="tags">
+                                <span class="tag premium">Premium</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="plats">
+                    <div class="card-image">
+                        <img src="images/boeuf-rossini.png" alt="Filet de Bœuf Rossini" class="dish-image">
+                        <span class="card-badge chef">Chef</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Filet de Bœuf Rossini</h3>
+                        <p>Foie gras poêlé, sauce truffe, légumes de saison</p>
+                        <div class="card-footer">
+                            <span class="price">42€</span>
+                            <span class="tags">
+                                <span class="tag premium">Premium</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="plats">
+                    <div class="card-image">
+                        <img src="images/sole-meuniere.png" alt="Sole Meunière" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Sole Meunière</h3>
+                        <p>Beurre noisette, pommes vapeur, citron de Menton</p>
+                        <div class="card-footer">
+                            <span class="price">38€</span>
+                            <span class="tags">
+                                <span class="tag">Poisson</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="plats">
+                    <div class="card-image">
+                        <img src="images/agneau-roti.png" alt="Carré d'Agneau Rôti" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Carré d'Agneau Rôti</h3>
+                        <p>Croûte d'herbes, jus au thym, légumes rôtis</p>
+                        <div class="card-footer">
+                            <span class="price">40€</span>
+                            <span class="tags">
+                                <span class="tag">Signature</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="plats">
+                    <div class="card-image">
+                        <img src="images/risotto-cepes.png" alt="Risotto aux Cèpes" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Risotto aux Cèpes</h3>
+                        <p>Riz Carnaroli, cèpes frais, parmesan 24 mois</p>
+                        <div class="card-footer">
+                            <span class="price">28€</span>
+                            <span class="tags">
+                                <span class="tag vege">Végétarien</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desserts -->
+                <div class="menu-card" data-category="desserts">
+                    <div class="card-image">
+                        <img src="images/tarte-tatin.png" alt="Tarte Tatin Maison" class="dish-image">
+                        <span class="card-badge signature">Signature</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Tarte Tatin Maison</h3>
+                        <p>Pommes Reinette, crème fraîche de Normandie</p>
+                        <div class="card-footer">
+                            <span class="price">12€</span>
+                            <span class="tags">
+                                <span class="tag">Traditionnel</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="card-image">
+                        <img src="images/creme-brulee.png" alt="Crème Brûlée Vanille" class="dish-image">
+                        <span class="card-badge chef">Chef</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Crème Brûlée Vanille</h3>
+                        <p>Vanille de Madagascar, caramel croustillant</p>
+                        <div class="card-footer">
+                            <span class="price">11€</span>
+                            <span class="tags">
+                                <span class="tag">Classique</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="card-image">
+                        <img src="images/profiteroles.png" alt="Profiteroles au Chocolat" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Profiteroles au Chocolat</h3>
+                        <p>Choux, glace vanille, chocolat Valrhona</p>
+                        <div class="card-footer">
+                            <span class="price">13€</span>
+                            <span class="tags">
+                                <span class="tag">Signature</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="card-image">
+                        <img src="images/millefeuille.png" alt="Millefeuille Caramélisé" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Millefeuille Caramélisé</h3>
+                        <p>Feuilletage croustillant, crème pâtissière</p>
+                        <div class="card-footer">
+                            <span class="price">14€</span>
+                            <span class="tags">
+                                <span class="tag premium">Premium</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="card-image">
+                        <img src="images/tarte-citron.png" alt="Tarte Citron Meringuée" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Tarte Citron Meringuée</h3>
+                        <p>Crème au citron, meringue italienne flambée</p>
+                        <div class="card-footer">
+                            <span class="price">12€</span>
+                            <span class="tags">
+                                <span class="tag">Frais</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-card" data-category="desserts">
+                    <div class="card-image">
+                        <img src="images/fraisier.png" alt="Fraisier" class="dish-image">
+                    </div>
+                    <div class="card-content">
+                        <h3>Fraisier</h3>
+                        <p>Génoise, crème mousseline, fraises fraîches</p>
+                        <div class="card-footer">
+                            <span class="price">11€</span>
+                            <span class="tags">
+                                <span class="tag">Saisonnier</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galerie" class="gallery">
+        <div class="section-header">
+            <span class="section-label">Notre Univers</span>
+            <h2 class="section-title">Galerie Photos</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item large">
+                <img src="images/salle-principale.png" alt="Notre Salle Principale" class="placeholder-gallery">
+                <div class="gallery-overlay">
+                    <h3>Notre Salle Principale</h3>
+                    <p>Un cadre élégant et raffiné</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/notre-chef.png" alt="Notre Chef" class="placeholder-gallery">
+                <div class="gallery-overlay">
+                    <h3>Notre Chef</h3>
+                    <p>Excellence et passion</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/nos-creations.png" alt="Nos Créations" class="placeholder-gallery">
+                <div class="gallery-overlay">
+                    <h3>Nos Créations</h3>
+                    <p>L'art dans l'assiette</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/notre-cave.png" alt="Notre Cave" class="placeholder-gallery">
+                <div class="gallery-overlay">
+                    <h3>Notre Cave</h3>
+                    <p>400+ références</p>
+                </div>
+            </div>
+            <div class="gallery-item large">
+                <img src="images/ambiance-chaleureuse.png" alt="Ambiance Chaleureuse" class="placeholder-gallery">
+                <div class="gallery-overlay">
+                    <h3>Ambiance Chaleureuse</h3>
+                    <p>Pour vos moments d'exception</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-label">Contactez-Nous</span>
+                    <h2 class="section-title">Réservez Votre Table</h2>
+                    <p class="contact-desc">Offrez-vous une expérience gastronomique inoubliable</p>
+                    
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">📍</div>
+                            <div class="info-text">
+                                <h4>Adresse</h4>
+                                <p>15 Rue de la Gastronomie<br>75001 Paris, France</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">📞</div>
+                            <div class="info-text">
+                                <h4>Téléphone</h4>
+                                <p>+33 1 23 45 67 89<br>Du mardi au dimanche</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-text">
+                                <h4>Horaires</h4>
+                                <p>Mar-Sam: 12h-14h30 & 19h-22h30<br>Dim: 12h-15h | Lundi: Fermé</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p>contact@ledelicefrancais.fr<br>reservations@ledelicefrancais.fr</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="reservationForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" id="nom" placeholder="Votre nom *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="prenom" placeholder="Votre prénom *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Votre email *" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="telephone" placeholder="Votre téléphone *" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="date" id="date" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="time" id="heure" required>
+                            </div>
+                            <div class="form-group">
+                                <select id="personnes" required>
+                                    <option value="">Nombre de personnes *</option>
+                                    <option value="1">1 personne</option>
+                                    <option value="2">2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5">5 personnes</option>
+                                    <option value="6">6 personnes</option>
+                                    <option value="7+">7+ personnes</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" rows="5" placeholder="Message ou demandes spéciales (optionnel)"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Confirmer la Réservation</span>
+                        </button>
+                        <p class="form-note">* Champs obligatoires</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="Le Délice Français" class="logo-icon-img">
+                        <span class="logo-text">Le Délice Français</span>
+                    </div>
+                    <p>Restaurant gastronomique étoilé au cœur de Paris depuis 1995</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">TripAdvisor</a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Liens Rapides</h4>
+                    <ul class="footer-links">
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#apropos">À Propos</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-contact">
+                        <li>15 Rue de la Gastronomie</li>
+                        <li>75001 Paris, France</li>
+                        <li>+33 1 23 45 67 89</li>
+                        <li>contact@ledelicefrancais.fr</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Horaires</h4>
+                    <ul class="footer-hours">
+                        <li><strong>Mardi - Samedi</strong></li>
+                        <li>12h00 - 14h30</li>
+                        <li>19h00 - 22h30</li>
+                        <li><strong>Dimanche</strong></li>
+                        <li>12h00 - 15h00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Le Délice Français. Tous droits réservés.</p>
+                <p>Site créé pour portfolio | Design par Développeur Web</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
