@@ -642,6 +642,8 @@ section {
     transition: var(--transition);
     cursor: pointer;
     width: 100%;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 .menu-card:hover {
@@ -650,7 +652,7 @@ section {
 }
 
 .menu-card.hidden {
-    display: none;
+    display: none !important;
 }
 
 .card-image {

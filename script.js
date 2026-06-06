@@ -127,13 +127,8 @@ document.querySelectorAll('.feature-card').forEach((card, index) => {
     observer.observe(card);
 });
 
-// Observe menu cards
-document.querySelectorAll('.menu-card').forEach((card, index) => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(30px)';
-    card.style.transition = `opacity 0.6s ease ${index * 0.05}s, transform 0.6s ease ${index * 0.05}s`;
-    observer.observe(card);
-});
+// NE PAS masquer les cartes menu au chargement
+// Les cartes sont visibles par défaut
 
 // Observe gallery items
 document.querySelectorAll('.gallery-item').forEach((item, index) => {
