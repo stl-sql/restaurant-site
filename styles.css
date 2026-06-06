@@ -1200,9 +1200,16 @@ section {
         gap: 20px;
     }
     
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-text p {
+        text-align: justify;
+    }
+    
     .about-text .btn {
-        display: block;
-        width: fit-content;
+        display: inline-block;
         margin: 0 auto;
     }
     
@@ -1316,6 +1323,20 @@ section {
     
     .about-stats {
         grid-template-columns: 1fr;
+    }
+    
+    .about-text {
+        text-align: center !important;
+    }
+    
+    .about-text p {
+        text-align: left;
+    }
+    
+    .about-text .btn {
+        display: block !important;
+        width: fit-content !important;
+        margin: 20px auto 0 auto !important;
     }
     
     .menu-grid {
