@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le Délice Français - Version Mobile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1A1A1D 0%, #0D0D0F 100%);
+            color: white;
+            padding: 100px 20px 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #1A1A1D;
+        }
+        
+        .menu-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .menu-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: #f5f5f0;
+        }
+        
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .card-content {
+            padding: 20px;
+        }
+        
+        .card-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: #1A1A1D;
+        }
+        
+        .card-content p {
+            color: #6B6B6B;
+            margin-bottom: 15px;
+        }
+        
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #D4AF37;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #D4AF37;
+            color: #1A1A1D;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>Le Délice Français</h1>
+        <p>Restaurant Gastronomique</p>
+    </div>
+
+    <div class="container">
+        <h2 class="section-title">Notre Menu</h2>
+        
+        <div class="menu-grid">
+            <!-- Entrées -->
+            <div class="menu-card">
+                <div class="card-image">
+                    <img src="images/soupe-oignon.png" alt="Soupe à l'Oignon Gratinée">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Signature</span>
+                    <h3>Soupe à l'Oignon Gratinée</h3>
+                    <p>Oignons caramélisés, bouillon corsé, Comté AOP</p>
+                    <div class="price">14€</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-image">
+                    <img src="images/foie-gras.png" alt="Foie Gras Mi-Cuit">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Chef</span>
+                    <h3>Foie Gras Mi-Cuit Maison</h3>
+                    <p>Chutney de figues, pain brioché, fleur de sel</p>
+                    <div class="price">24€</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-image">
+                    <img src="images/chevre-chaud.png" alt="Chèvre Chaud">
+                </div>
+                <div class="card-content">
+                    <h3>Salade de Chèvre Chaud</h3>
+                    <p>Mesclun, tomates confites, noix caramélisées</p>
+                    <div class="price">16€</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-image">
+                    <img src="images/escargots-bourgogne.png" alt="Escargots">
+                </div>
+                <div class="card-content">
+                    <h3>Escargots de Bourgogne</h3>
+                    <p>Beurre persillé à l'ail, pain de campagne</p>
+                    <div class="price">18€</div>
+                </div>
+            </div>
+
+            <!-- Plats -->
+            <div class="menu-card">
+                <div class="card-image">
+                    <img src="images/coq-au-vin.png" alt="Coq au Vin">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Signature</span>
+                    <h3>Coq au Vin de Bourgogne</h3>
+                    <p>Poulet fermier, lardons, champignons, oignons</p>
+                    <div class="price">32€</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-image">
+                    <img src="images/magret-canard.png" alt="Magret de Canard">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Chef</span>
+                    <h3>Magret de Canard aux Cerises</h3>
+                    <p>Sauce cerises Montmorency, gratin dauphinois</p>
+                    <div class="price">36€</div>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="card-image">
+                    <img src="images/boeuf-rossini.png" alt="Bœuf Rossini">
+                </div>
+                <div class="card-content">
+                    <span class="badge">Chef</span>
+                    <h3>Filet de Bœuf Rossini</h3>
+                    <p>Foie gras poêlé, sauce truffe, légumes de saison</p>
+                    <div class="price">42€</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Log pour debug
+        console.log('Page chargée');
+        document.querySelectorAll('img').forEach((img, i) => {
+            img.onload = () => console.log(`✅ Image ${i+1} OK`);
+            img.onerror = () => console.error(`❌ Image ${i+1} ERREUR`);
+        });
+    </script>
+</body>
+</html>
