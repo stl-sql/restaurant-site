@@ -657,7 +657,7 @@ section {
     position: relative;
     height: 250px;
     overflow: hidden;
-    background: var(--light);
+    background: linear-gradient(135deg, #f5f5f0, #e8e8e8);
 }
 
 .card-image img {
@@ -665,6 +665,11 @@ section {
     height: 100% !important;
     object-fit: cover;
     display: block !important;
+}
+
+.card-image img[src*=".png"] {
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .placeholder-dish {
