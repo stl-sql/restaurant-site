@@ -43,6 +43,15 @@ img {
     display: block;
 }
 
+/* Force l'affichage des images sur mobile */
+.card-image img,
+.dish-image,
+img[class*="dish"] {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
     font-weight: 600;
@@ -1217,17 +1226,24 @@ section {
         background: var(--light);
     }
     
-    .card-image img {
+    .card-image img,
+    .dish-image {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
         display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
     }
     
-    .dish-image {
-        width: 100% !important;
-        height: 100% !important;
+    .menu-card {
+        opacity: 1 !important;
+        visibility: visible !important;
         display: block !important;
+    }
+    
+    .menu-card.hidden {
+        display: none !important;
     }
     
     .contact-form {

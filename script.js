@@ -75,6 +75,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const filterBtns = document.querySelectorAll('.filter-btn');
 const menuCards = document.querySelectorAll('.menu-card');
 
+// S'assurer que toutes les cartes sont visibles au chargement
+menuCards.forEach(card => {
+    card.style.display = 'block';
+    card.style.opacity = '1';
+    card.style.visibility = 'visible';
+});
+
 filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         // Remove active class from all buttons
@@ -88,7 +95,8 @@ filterBtns.forEach(btn => {
             
             if (filterValue === 'all' || category === filterValue) {
                 card.style.display = 'block';
-                card.style.animation = 'fadeIn 0.5s ease-out';
+                card.style.opacity = '1';
+                card.style.visibility = 'visible';
             } else {
                 card.style.display = 'none';
             }
